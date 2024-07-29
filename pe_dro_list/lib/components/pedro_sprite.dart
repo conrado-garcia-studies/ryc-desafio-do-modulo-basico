@@ -34,8 +34,8 @@ class PedroSpriteState extends State<PedroSprite> {
     _horizontalAxisProcessingMatrixColumnsCount =
         widget.isIncludesPedro ? 28 : 12;
     _horizontalAxisProcessingMatrixLastRowColumnsCount =
-        widget.isIncludesPedro ? 28 : 5;
-    _horizontalAxisProcessingMatrixRowsCount = widget.isIncludesPedro ? 28 : 13;
+        widget.isIncludesPedro ? 28 : 12;
+    _horizontalAxisProcessingMatrixRowsCount = widget.isIncludesPedro ? 28 : 12;
     _verticalAxisProcessingColumnRowsCount = widget.isIncludesPedro ? 19 : 12;
     _init();
   }
@@ -65,8 +65,13 @@ class PedroSpriteState extends State<PedroSprite> {
           if (_column < _horizontalAxisProcessingMatrixColumnsCount) {
             if (_row == _horizontalAxisProcessingMatrixRowsCount &&
                 _column == _horizontalAxisProcessingMatrixLastRowColumnsCount) {
-              _column = 1;
-              _row = 1;
+              if (_verticalAxisProcessingColumnRowsCount > 0) {
+                _column = 1 + _horizontalAxisProcessingMatrixColumnsCount;
+                _row = 1;
+              } else {
+                _column = 1;
+                _row = 1;
+              }
             } else {
               _column++;
             }

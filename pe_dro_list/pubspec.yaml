@@ -37,7 +37,6 @@ dependencies:
   intl: ^0.19.0
   jiffy: ^6.3.1
   logger: ^2.4.0
-  lottie: ^3.1.2
   provider: ^6.1.2
   retry: ^3.1.2
   shared_preferences: ^2.0.15
@@ -108,14 +107,6 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Lato
-      fonts:
-        - asset: assets/fonts/Lato-Regular.ttf
-        - asset: assets/fonts/Lato-Bold.ttf
-          weight: 700
-    - family: Anton
-      fonts:
-        - asset: assets/fonts/Anton-Regular.ttf
     - family: The Bold Font
       fonts:
         - asset: fonts/theboldfont.ttf
