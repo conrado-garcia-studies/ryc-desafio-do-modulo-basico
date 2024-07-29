@@ -1,4 +1,5 @@
 import 'package:humanize_duration/humanize_duration.dart';
+import 'package:shop/components/pedro_avatar.dart';
 import 'package:shop/models/facts.dart';
 import 'package:shop/models/level.dart';
 import 'package:shop/models/life_package.dart';
@@ -6,13 +7,13 @@ import 'package:shop/models/shop_item.dart';
 
 class Constants {
   static const bool autoStartAudio = true;
+  static const PedroAvatarType avatarType = PedroAvatarType.spriteWith25Fps;
   static const List<String> completionMessages = <String>[
     'Congrats on completing the task! 🙌',
     'You completed a task! Keep it up! 💪',
     'Great job completing the task! 🎉'
   ];
   static const String datePattern = 'MM/dd/yyyy';
-  static const bool devMode = true;
   static const Duration durationFromNowToDueLastDate =
       Duration(days: 375 + 44725);
   static const List<String> errorImageAssetNames = <String>[
